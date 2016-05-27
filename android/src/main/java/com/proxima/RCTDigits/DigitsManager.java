@@ -34,8 +34,8 @@ import io.fabric.sdk.android.Fabric;
 
 public class DigitsManager extends ReactContextBaseJavaModule implements LifecycleEventListener, AuthCallback {
 
-    private static final String META_DATA_KEY = "io.fabric.ApiKey";
-    private static final String META_DATA_SECRET = "io.fabric.ApiSecret";
+    private static final String META_DATA_KEY = "core.twitter.ApiKey";
+    private static final String META_DATA_SECRET = "core.twitter.ApiSecret";
     private static final String TAG = "RCTDigits";
 
     private boolean paused = false;
