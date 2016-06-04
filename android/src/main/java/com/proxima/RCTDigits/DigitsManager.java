@@ -11,6 +11,7 @@ import com.digits.sdk.android.DigitsAuthConfig;
 import com.digits.sdk.android.DigitsClient;
 import com.digits.sdk.android.DigitsException;
 import com.digits.sdk.android.DigitsOAuthSigning;
+
 import com.digits.sdk.android.DigitsSession;
 
 import com.facebook.react.bridge.Callback;
@@ -86,7 +87,7 @@ public class DigitsManager extends ReactContextBaseJavaModule implements Lifecyc
         DigitsSession session = Digits.getSessionManager().getActiveSession();
         WritableMap sessionData = new WritableNativeMap();
         sessionData.putString("userId", new Long(session.getId()).toString());
-        sessionData.putString("phoneNumber", new Long(session.getPhoneNumber()).toString());
+        sessionData.putString("phoneNumber", session.getPhoneNumber());
         callback.invoke(sessionData);
     }
 
